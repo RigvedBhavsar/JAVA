@@ -121,6 +121,26 @@ class stringOperation
             System.out.println(" Not pallindrome");
         }
     }
+
+    public void StringReverse( String str)
+    {
+        char arr[]=str.toCharArray();
+        int iStart=0;
+        int iEnd = arr.length-1;
+        char temp;
+
+        while(iStart < iEnd)
+        {
+            temp = arr[iStart];
+            arr[iStart]=arr[iEnd];
+            arr[iEnd]=temp;
+
+            iStart++;
+            iEnd--;
+        }
+        String rev = arr.toString();
+        System.out.println(rev);
+    }
 }
 
 class StringClass2

@@ -26,6 +26,31 @@ class stringclass
         String rev = new String(brr);
         System.out.println(rev);
     }
+
+    public void removeChar(String str , char ch)
+    {
+        char arr[]= str.toCharArray();  
+        int j=0;
+        int Count=0;
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i] !=ch)
+            {
+                arr[j++]=arr[i];
+            }
+            else
+            {
+                Count++;
+            }
+        }
+        while(Count > 0)
+        {
+            arr[j++]='\0';
+            Count--;
+        }
+        System.out.println(arr);
+    }
 }
 
 class StringRemoveOccur
